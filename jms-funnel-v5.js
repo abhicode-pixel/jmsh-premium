@@ -27,34 +27,44 @@
                 <div class="jms-p-grid">
                     <div class="jms-p-field">
                         <label>FULL NAME</label>
-                        <input type="text" name="name" required placeholder="John Doe">
+                        <div class="jms-p-input-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <input type="text" name="name" required placeholder="John Doe">
+                        </div>
                     </div>
                     <div class="jms-p-field">
                         <label>MOBILE NUMBER</label>
-                        <input type="tel" name="phone" required minlength="10" placeholder="9876543210">
+                        <div class="jms-p-input-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <input type="tel" name="phone" required minlength="10" placeholder="9876543210">
+                        </div>
                     </div>
                 </div>
                 <div class="jms-p-grid">
                     <div class="jms-p-field">
                         <label>DEPARTMENT</label>
-                        <select name="specialty" required>
-                            <option value="" disabled selected>Select Department...</option>
-                            <option value="Gynaecology">Gynaecology & Obstetrics</option>
-                            <option value="Gastroenterology">Gastroenterology</option>
-                            <option value="Pediatrics">Pediatrics & Neonatal Care</option>
-                            <option value="Internal Medicine">Internal Medicine</option>
-                            <option value="Physiotherapy">Physiotherapy</option>
-                            <option value="Surgery">Laparoscopic Surgery</option>
-                        </select>
+                        <div class="jms-p-input-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            <select name="specialty" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="Gynaecology">Gynaecology</option>
+                                <option value="Gastroenterology">Gastroenterology</option>
+                                <option value="Pediatrics">Pediatrics</option>
+                                <option value="Surgery">Surgery</option>
+                                <option value="Physiotherapy">Physiotherapy</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="jms-p-field">
                         <label>PREFERENCE</label>
-                        <select name="time" required>
-                            <option value="ASAP">As Soon As Possible</option>
-                            <option value="HomeVisit">Home Visit Request</option>
-                            <option value="Morning">Morning Slot</option>
-                            <option value="Evening">Evening Slot</option>
-                        </select>
+                        <div class="jms-p-input-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <select name="time" required>
+                                <option value="ASAP">ASAP</option>
+                                <option value="Morning">Morning</option>
+                                <option value="Evening">Evening Slot</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <button type="submit" class="jms-p-submit">Confirm Priority Booking</button>
@@ -177,53 +187,62 @@
         
         /* PREMIUM MODAL */
         .jms-p-modal {
-            background: #fff !important; width: 95% !important; max-width: 550px !important;
-            border-radius: 30px !important; padding: 50px !important; position: relative !important;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.3) !important;
-            animation: jmsPPopIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-            margin: 20px !important; border: 1px solid rgba(255,255,255,0.2) !important;
+            background: #fff !important; width: 95% !important; max-width: 580px !important;
+            border-radius: 35px !important; padding: 50px 40px !important; position: relative !important;
+            box-shadow: 0 40px 100px rgba(125, 201, 181, 0.25) !important;
+            animation: jmsPPopIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.25) !important;
+            margin: 20px !important; border: 1px solid rgba(125, 201, 181, 0.1) !important;
+            overflow: hidden !important;
         }
         
         .jms-p-close {
-            position: absolute !important; top: 20px !important; right: 20px !important;
-            width: 40px !important; height: 40px !important; border-radius: 50% !important;
-            background: #f1f5f9 !important; border: none !important; cursor: pointer !important;
-            color: var(--gray) !important; font-size: 24px !important; z-index: 10 !important;
+            position: absolute !important; top: 25px !important; right: 25px !important;
+            width: 36px !important; height: 36px !important; border-radius: 50% !important;
+            background: #f8fafc !important; border: none !important; cursor: pointer !important;
+            color: var(--gray) !important; font-size: 20px !important; z-index: 10 !important;
             display: flex !important; align-items: center !important; justify-content: center !important;
             transition: 0.3s !important;
         }
-        .jms-p-close:hover { background: var(--primary) !important; color: #fff !important; transform: rotate(90deg) !important; }
+        .jms-p-close:hover { background: var(--primary) !important; color: #fff !important; transform: rotate(90deg) scale(1.1) !important; }
         
-        .jms-p-head { text-align: center; margin-bottom: 35px; }
+        .jms-p-head { text-align: center; margin-bottom: 40px; }
         .jms-p-logo {
-            font-size: 56px !important; font-weight: 900 !important; letter-spacing: 5px !important;
+            font-size: 64px !important; font-weight: 800 !important; letter-spacing: 6px !important;
             background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
             -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important;
             margin-bottom: 5px !important; text-transform: uppercase !important;
+            font-family: 'Poppins', sans-serif !important; filter: drop-shadow(0 2px 5px rgba(125, 201, 181, 0.2)) !important;
         }
-        .jms-p-head h2 { font-size: 28px; color: var(--dark); font-weight: 700; margin-bottom: 8px; }
-        .jms-p-head p { font-size: 15px; color: var(--gray); line-height: 1.6; }
+        .jms-p-head h2 { font-size: 30px; color: var(--dark); font-weight: 700; margin-bottom: 10px; letter-spacing: -0.5px; }
+        .jms-p-head p { font-size: 15px; color: var(--gray); line-height: 1.6; max-width: 400px; margin: 0 auto; }
         
-        /* GRID & FIELDS */
-        .jms-p-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 20px !important; margin-bottom: 20px !important; }
-        .jms-p-field { display: flex !important; flex-direction: column !important; text-align: left !important; }
-        .jms-p-field label { font-size: 11px !important; font-weight: 700 !important; color: var(--dark) !important; text-transform: uppercase !important; margin-bottom: 10px !important; letter-spacing: 1px !important; }
+        /* GRID & FIELDS FIX */
+        .jms-p-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 20px !important; margin-bottom: 25px !important; width: 100% !important; }
+        .jms-p-field { display: flex !important; flex-direction: column !important; text-align: left !important; width: 100% !important; }
+        .jms-p-field label { font-size: 11px !important; font-weight: 800 !important; color: #64748b !important; text-transform: uppercase !important; margin-bottom: 12px !important; letter-spacing: 1.2px !important; }
+        
+        .jms-p-input-wrap { position: relative !important; width: 100% !important; }
+        .jms-p-input-wrap svg { position: absolute !important; left: 16px !important; top: 50% !important; transform: translateY(-50%) !important; width: 20px !important; height: 20px !important; color: var(--primary) !important; opacity: 0.7 !important; pointer-events: none !important; }
+        
         .jms-p-field input, .jms-p-field select {
-            height: 54px !important; padding: 0 20px !important; border: 2px solid var(--border) !important;
-            border-radius: 15px !important; font-size: 15px !important; background: var(--bg) !important;
-            outline: none !important; transition: all 0.3s !important; font-family: inherit !important;
+            width: 100% !important; height: 58px !important; padding: 0 16px 0 48px !important; border: 2px solid #f1f5f9 !important;
+            border-radius: 18px !important; font-size: 15px !important; background: #f8fafc !important;
+            outline: none !important; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; font-family: inherit !important;
+            color: var(--dark) !important;
         }
-        .jms-p-field input:focus, .jms-p-field select:focus { border-color: var(--primary) !important; background: #fff !important; box-shadow: 0 0 0 5px rgba(125, 201, 181, 0.1) !important; }
+        .jms-p-field input:focus, .jms-p-field select:focus { border-color: var(--primary) !important; background: #fff !important; box-shadow: 0 10px 25px rgba(125, 201, 181, 0.15) !important; transform: translateY(-2px) !important; }
         
         /* PREMIUM BUTTON */
         .jms-p-submit {
             width: 100% !important; background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
-            color: #fff !important; border: none !important; padding: 18px !important;
-            border-radius: 50px !important; font-size: 17px !important; font-weight: 700 !important;
-            cursor: pointer !important; transition: 0.4s !important;
-            box-shadow: 0 10px 30px rgba(125, 201, 181, 0.5) !important; margin-top: 10px !important;
+            color: #fff !important; border: none !important; padding: 20px !important;
+            border-radius: 20px !important; font-size: 17px !important; font-weight: 700 !important;
+            cursor: pointer !important; transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+            box-shadow: 0 15px 35px rgba(125, 201, 181, 0.4) !important; margin-top: 10px !important;
+            letter-spacing: 0.5px !important;
         }
-        .jms-p-submit:hover { transform: translateY(-5px) scale(1.02) !important; box-shadow: 0 15px 40px rgba(125, 201, 181, 0.6) !important; }
+        .jms-p-submit:hover { transform: translateY(-6px) !important; box-shadow: 0 20px 40px rgba(125, 201, 181, 0.5) !important; filter: brightness(1.05) !important; }
+        .jms-p-submit:active { transform: translateY(-2px) !important; }
         
         /* PREMIUM CHAT */
         .jms-p-chat {
@@ -283,21 +302,32 @@
         .jms-p-chat-footer button { background: var(--primary); color: #fff; width: 45px; height: 45px; border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 0 5px 15px rgba(125, 201, 181, 0.4); }
         .jms-p-chat-footer button:hover { transform: scale(1.1); background: var(--primary-dark); }
         
-        /* QUIZ */
-        .jms-p-quiz { animation: jmsPPopIn 0.5s !important; }
-        .jms-p-icon { font-size: 45px; margin-bottom: 15px; }
-        .jms-p-choices { display: flex; flex-direction: column; gap: 12px; }
-        .jms-p-choices button {
-            width: 100% !important; padding: 15px !important; background: var(--bg) !important;
-            border: 2px solid var(--border) !important; border-radius: 15px !important;
-            font-weight: 600 !important; cursor: pointer !important; transition: 0.3s !important; color: var(--dark) !important;
+        /* QUIZ / EXIT MODAL ENHANCED */
+        .jms-p-quiz {
+            background: #fff !important; border-radius: 35px !important; padding: 50px 40px !important;
+            box-shadow: 0 40px 100px rgba(125, 201, 181, 0.3) !important;
+            animation: jmsPPopIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.25) !important;
+            max-width: 480px !important; width: 95% !important; border: 1px solid rgba(125,201,181,0.1) !important;
         }
-        .jms-p-choices button:hover { border-color: var(--primary) !important; color: var(--primary) !important; transform: translateY(-3px) !important; background: #fff !important; }
+        .jms-p-icon { font-size: 56px !important; margin-bottom: 20px !important; filter: drop-shadow(0 5px 10px rgba(125, 201, 181, 0.2)) !important; }
+        .jms-p-quiz h3 { font-size: 26px !important; color: var(--dark) !important; font-weight: 700 !important; margin-bottom: 12px !important; }
+        .jms-p-quiz p { color: var(--gray) !important; font-size: 15px !important; margin-bottom: 30px !important; line-height: 1.5 !important; }
         
-        @media (max-width: 480px) {
+        .jms-p-choices { display: flex !important; flex-direction: column !important; gap: 15px !important; }
+        .jms-p-choices button {
+            width: 100% !important; padding: 18px !important; background: #f8fafc !important;
+            border: 2px solid #f1f5f9 !important; border-radius: 20px !important;
+            font-weight: 700 !important; cursor: pointer !important; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; color: #475569 !important;
+            font-size: 15px !important; text-align: center !important;
+        }
+        .jms-p-choices button:hover { border-color: var(--primary) !important; color: var(--primary) !important; transform: translateY(-4px) !important; background: #fff !important; box-shadow: 0 10px 20px rgba(125, 201, 181, 0.15) !important; }
+        
+        @media (max-width: 768px) {
+            .jms-p-modal, .jms-p-quiz { padding: 40px 25px !important; border-radius: 30px !important; }
+            .jms-p-grid { grid-template-columns: 1fr !important; gap: 15px !important; }
+            .jms-p-head h2 { font-size: 24px !important; }
+            .jms-p-logo { font-size: 48px !important; }
             .jms-p-chat:not(.jms-p-min) { width: calc(100% - 40px) !important; left: 20px !important; }
-            .jms-p-modal { padding: 30px !important; }
-            .jms-p-grid { grid-template-columns: 1fr !important; }
             .jms-p-notif { display: none !important; }
         }
     `;
